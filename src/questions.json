@@ -1,0 +1,79 @@
+{
+  "categories": [
+    {
+      "name": "Cricket",
+      "questions": [
+        {
+          "text": "Who is known as the 'Little Master' in cricket?",
+          "options": ["Sachin Tendulkar", "Rahul Dravid", "Virat Kohli", "Sunil Gavaskar"],
+          "correctAnswer": "Sachin Tendulkar"
+        },
+        {
+          "text": "Which country won the ICC Cricket World Cup in 2019?",
+          "options": ["India", "Australia", "England", "South Africa"],
+          "correctAnswer": "England"
+        },
+        {
+          "text": "Who holds the record for the highest individual score in a One Day International (ODI) cricket match?",
+          "options": ["Rohit Sharma", "Sachin Tendulkar", "Chris Gayle", "Virender Sehwag"],
+          "correctAnswer": "Rohit Sharma"
+        },
+        {
+          "text": "Which cricket format is also known as T20?",
+          "options": ["One Day International", "Test Cricket", "Twenty20", "One Day Test"],
+          "correctAnswer": "Twenty20"
+        }
+      ]
+    },
+    {
+      "name": "Marvel Cinematic Universe",
+      "questions": [
+        {
+          "text": "What is the name of Tony Stark's AI assistant in the Iron Man suit?",
+          "options": ["J.A.R.V.I.S.", "F.R.I.D.A.Y.", "S.H.I.E.L.D.", "H.E.L.E.N."],
+          "correctAnswer": "J.A.R.V.I.S."
+        },
+        {
+          "text": "Who plays the character of Thor in the Marvel Cinematic Universe?",
+          "options": ["Chris Evans", "Chris Pratt", "Chris Hemsworth", "Chris Pine"],
+          "correctAnswer": "Chris Hemsworth"
+        },
+        {
+          "text": "What is the real name of Black Widow?",
+          "options": ["Natasha Romanoff", "Wanda Maximoff", "Carol Danvers", "Jessica Jones"],
+          "correctAnswer": "Natasha Romanoff"
+        },
+        {
+          "text": "Which Infinity Stone is housed in the Tesseract?",
+          "options": ["Reality Stone", "Power Stone", "Space Stone", "Mind Stone"],
+          "correctAnswer": "Space Stone"
+        }
+      ]
+    },
+    {
+      "name": "Bollywood Movies",
+      "questions": [
+        {
+          "text": "Who directed the movie 'Dilwale Dulhania Le Jayenge'?",
+          "options": ["Aditya Chopra", "Karan Johar", "Yash Chopra", "Sanjay Leela Bhansali"],
+          "correctAnswer": "Aditya Chopra"
+        },
+        {
+          "text": "Which Bollywood actor is known as the 'Khiladi'?",
+          "options": ["Shah Rukh Khan", "Salman Khan", "Aamir Khan", "Akshay Kumar"],
+          "correctAnswer": "Akshay Kumar"
+        },
+        {
+          "text": "Which Bollywood movie won the Academy Award for Best Foreign Language Film in 2009?",
+          "options": ["Lagaan", "Koi Mil Gaya", "Taare Zameen Par", "Slumdog Millionaire"],
+          "correctAnswer": "Slumdog Millionaire"
+        },
+        {
+          "text": "Who played the role of 'Mogambo' in the movie 'Mr. India'?",
+          "options": ["Amrish Puri", "Anupam Kher", "Paresh Rawal", "Naseeruddin Shah"],
+          "correctAnswer": "Amrish Puri"
+        }
+      ]
+    }
+  ]
+}
