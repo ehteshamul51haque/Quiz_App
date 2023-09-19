@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        'logo-pink': '#F500A2',
+        'pink-dark': '#d50790',
+        'pink-light': '#f424ae'
+      },
       fontFamily: {
         satoshi: ["Satoshi", "sans-serif"],
         inter: ["Inter", "sans-serif"],

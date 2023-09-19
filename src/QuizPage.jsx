@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation,useNavigate } from "react-router-dom";
 
+
 const QuizPage = () => {
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
@@ -47,43 +48,50 @@ const QuizPage = () => {
             ...userAnswers,
             [currentQuestionIndex]: { selectedOption, isCorrect },
         });
-
-        if (currentQuestionIndex < questions.length - 1) {
+    };
+    const handleNextQuestion = () => {
+                if (currentQuestionIndex < questions.length - 1) {
             setCurrentQuestionIndex(currentQuestionIndex + 1);
         }
         else {
             navigate(`/results?name=${userName}&category=${selectedCategory}&score=${score}&total=${questions.length}`);
         }
-    };
+    }
     const renderAnswerOptions = () => {
         const currentQuestion = questions[currentQuestionIndex];
         return currentQuestion.options.map((option, index) => (
             <div key={index}>
                 <label>
                     <input type="radio" name="answer" value={option} onChange={() => handleAnswerSubmit(option)}
-                        disabled={userAnswers[currentQuestionIndex] !== undefined} />
+                        checked={userAnswers[currentQuestionIndex]?.selectedOption === option}
+                        className="form-radio  h-3.5 w-3.5 mr-1.5 text-center"
+                    // disabled={userAnswers[currentQuestionIndex] !== undefined} 
+                    />
                     {option}
                 </label>
             </div>
         ));
     };
   return (
-    <div className="quiz-page">
-          <h2>Hello, {userName}! Let's start the {selectedCategory} quiz.</h2>
+      <div className="back">
+          <div className="card">
+              <h2 className="text-2xl font-semibold font-satoshi mb-6 text-center">Hello, {userName}!<br/><span className=" text-xl">Let&apos;s start the {selectedCategory} quiz.</span> </h2>
           {questions.length > 0 && currentQuestionIndex < questions.length ? (
               <div>
-                  <p>Question {currentQuestionIndex + 1}: {questions[currentQuestionIndex].text}</p>
+                  <p className="text-lg mb-4">Question {currentQuestionIndex + 1}: {questions[currentQuestionIndex].text}</p>
                   {renderAnswerOptions()}
-                  {userAnswers[currentQuestionIndex] !== undefined && (
-                      <p>{userAnswers[currentQuestionIndex].isCorrect ? 'Correct' : 'Incorrect'}</p>
-                  )}
+                      <div className="text-center">
+                       <button onClick={handleNextQuestion} disabled={userAnswers[currentQuestionIndex] === undefined}
+                      className={`py-2 px-4 rounded-md bg-pink-light text-white hover:bg-pink-dark transition duration-300 ${userAnswers[currentQuestionIndex] === undefined ? "opacity-50 cursor-not-allowed" : ""}`}>Next Question</button>   
+                  </div>
+                      
               </div>
           ) : (
                   <div>
-                      <p>Congratulations, you've completed the {selectedCategory} quiz.</p>
-                      {/* <button onClick={()=>navigate(`/results?name=${userName}&category=${selectedCategory}&score=${score}`)}>Check Result</button> */}
+                      <p className="text-lg">Congratulations, you&apos;ve completed the {selectedCategory} quiz.</p>
              </div>     
           )}
+          </div>   
     </div>
   )
 }
