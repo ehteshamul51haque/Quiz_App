@@ -9,5 +9,5 @@
   @apply bg-gray-100 min-h-screen flex flex-col items-center;
 }
 .card {
-  @apply max-w-2xl p-14 bg-white shadow-lg rounded-lg mt-20;
+  @apply w-3/5 p-16 bg-white shadow-lg rounded-lg mt-14 mb-10;
 }

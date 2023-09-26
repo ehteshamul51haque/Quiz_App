@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 const ResultsPage = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
-  const userName = queryParams.get("name");
+  // const userName = queryParams.get("name");
   const selectedCategory = queryParams.get("category");
   const score = queryParams.get("score");
   const total = queryParams.get("total");
@@ -14,10 +14,7 @@ const ResultsPage = () => {
       <div className=" card">
         <h2 className="text-4xl font-bold mb-4 font-satoshi ">Quiz Results</h2>
         <p className="text-3xl text-center mb-4 font-satoshi">
-          Congratulations, {userName}! <br />
-          <span className="text-2xl">
-            You&apos;ve completed the {selectedCategory} quiz.
-          </span>
+          Congratulations! You&apos;ve completed the {selectedCategory} quiz.
         </p>
         <p className="text-lg mb-4">
           Your final score is: {score} out of {total}
